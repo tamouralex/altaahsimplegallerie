@@ -1,0 +1,68 @@
+tt_content.altaahsimplegallerie_simplegallerie = FLUIDTEMPLATE
+tt_content.altaahsimplegallerie_simplegallerie {
+    layoutRootPaths.0 = EXT:altaahsimplegallerie/Resources/Private/Layouts/
+    layoutRootPaths.10 = {$plugin.tx_altaahsimplegallerie.view.layoutRootPath}
+    partialRootPaths.0 = EXT:altaahsimplegallerie/Resources/Private/Partials/
+    partialRootPaths.10 = {$plugin.tx_altaahsimplegallerie.view.partialRootPath}
+    templateRootPaths.0 = EXT:altaahsimplegallerie/Resources/Private/Templates/Content/
+    templateRootPaths.10 = {$plugin.tx_altaahsimplegallerie.view.templateRootPath}
+    templateName = Simplegallerie
+    dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+    dataProcessing.10 {
+        if.isTrue.field = tx_altaahsimplegallerie_simplegalerieimg
+        table = tx_altaahsimplegallerie_simplegalerieimg
+        pidInList.field = pid
+        where = parentid=###uid### AND deleted=0 AND hidden=0
+        orderBy = sorting
+        markers.uid.field = uid
+        as = data_tx_altaahsimplegallerie_simplegalerieimg
+    }
+dataProcessing.10 {
+        dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    dataProcessing.10 {
+        if.isTrue.field = tx_altaahsimplegallerie_simpleimg
+        references {
+            fieldName = tx_altaahsimplegallerie_simpleimg
+            table = tx_altaahsimplegallerie_simplegalerieimg
+        }
+        as = data_tx_altaahsimplegallerie_simpleimg
+    }
+
+}
+}
+
+##################
+#### INCLUDES ####
+##################
+
+page {
+
+
+    includeCSS {
+        magnifici = EXT:altaahsimplegallerie/Resources/Public/Css/magnific-popup.css
+        magnifici.if.equals = 1
+        magnifici.if.value = {$incmagnificcsssg}
+        sgcss = EXT:altaahsimplegallerie/Resources/Public/Css/simplegal.css
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+        jqueryi = EXT:altaahsimplegallerie/Resources/Public/JavaScript/jquery.min.js
+        jqueryi.if.equals = 1
+        jqueryi.if.value = {$incjqsg} 
+        magjsi =EXT:altaahsimplegallerie/Resources/Public/JavaScript/jquery.magnific-popup.js
+        magjsi.if.equals = 1
+        magjsi.if.value = {$incmagnificjssg}       
+ 
+    }
+
+}
+tt_content.altaahsimplegallerie_simplegallerie {
+    settings {
+        defaultHeaderType = 2
+        }
+}
+

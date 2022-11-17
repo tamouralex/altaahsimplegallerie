@@ -1,0 +1,122 @@
+{
+    "tt_content": {
+        "elements": {
+            "simplegallerie": {
+                "color": "#000000",
+                "colorOverlay": "#000000",
+                "columns": [
+                    "tx_mask_simplegalerieimg"
+                ],
+                "description": "",
+                "descriptions": [
+                    "Gallerie"
+                ],
+                "icon": "fa-bank",
+                "iconOverlay": "",
+                "key": "simplegallerie",
+                "label": "SimpleGallerie",
+                "labels": [
+                    "Image gallerie"
+                ],
+                "shortLabel": "",
+                "sorting": 3
+            }
+        },
+        "palettes": {
+            "tx_mask_2590b2d82096d8": {
+                "description": "",
+                "label": "pallettetest",
+                "showitem": [
+                    "subheader"
+                ]
+            }
+        },
+        "sql": {
+            "tx_mask_simplegalerieimg": {
+                "tt_content": {
+                    "tx_mask_simplegalerieimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_simplegalerieimg": {
+                "config": {
+                    "appearance": {
+                        "enabledControls": {
+                            "delete": 1,
+                            "dragdrop": 1,
+                            "hide": 1,
+                            "info": 1,
+                            "localize": 1,
+                            "new": 1,
+                            "sort": 1
+                        },
+                        "levelLinksPosition": "top",
+                        "showAllLocalizationLink": 1,
+                        "showNewRecordLink": 1,
+                        "showPossibleLocalizationRecords": 1,
+                        "useSortable": 1
+                    },
+                    "foreign_field": "parentid",
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_table_field": "parenttable",
+                    "type": "inline"
+                },
+                "fullKey": "tx_mask_simplegalerieimg",
+                "key": "simplegalerieimg",
+                "type": "inline"
+            }
+        }
+    },
+    "tx_mask_simplegalerieimg": {
+        "sql": {
+            "tx_mask_simpleimg": {
+                "tx_mask_simplegalerieimg": {
+                    "tx_mask_simpleimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_simpleimg": {
+                "config": {
+                    "appearance": {
+                        "elementBrowserEnabled": 1,
+                        "enabledControls": {
+                            "delete": 1,
+                            "dragdrop": 1,
+                            "hide": 1,
+                            "info": 1,
+                            "localize": 1,
+                            "sort": 0
+                        },
+                        "fileUploadAllowed": 1,
+                        "useSortable": 1
+                    },
+                    "foreign_table": "sys_file_reference",
+                    "type": "inline"
+                },
+                "description": "Image",
+                "fullKey": "tx_mask_simpleimg",
+                "imageoverlayPalette": 1,
+                "inlineParent": "tx_mask_simplegalerieimg",
+                "key": "simpleimg",
+                "label": "Image",
+                "order": 1,
+                "type": "file"
+            }
+        }
+    },
+    "mask_export": {
+        "elements": {
+            "configuration": {
+                "key": "configuration",
+                "label": "altaahsimplegallerie",
+                "shortLabel": "Altaah",
+                "columns": [
+                    "simplegallerie"
+                ]
+            }
+        }
+    }
+}

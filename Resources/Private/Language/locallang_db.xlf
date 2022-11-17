@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-11-16T11:43:34+01:00" product-name="altaahsimplegallerie">
+    <header/>
+    <body>
+      <trans-unit id="tx_altaahsimplegallerie_simplegalerieimg">
+        <source>tx_altaahsimplegallerie_simplegalerieimg</source>
+      </trans-unit>
+      <trans-unit id="tx_altaahsimplegallerie_simplegalerieimg.tx_altaahsimplegallerie_simpleimg">
+        <source>Image</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_altaahsimplegallerie_simplegalerieimg">
+        <source>Image gallerie</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.div._altaahsimplegallerie_">
+        <source>altaahsimplegallerie</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.altaahsimplegallerie_simplegallerie">
+        <source>SimpleGallerie</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+            simplegallerie {
+                iconIdentifier = tx_altaahsimplegallerie_simplegallerie
+                title = LLL:EXT:altaahsimplegallerie/Resources/Private/Language/locallang_db_new_content_el.xlf:wizards.newContentElement.simplegallerie_title
+                description = LLL:EXT:altaahsimplegallerie/Resources/Private/Language/locallang_db_new_content_el.xlf:wizards.newContentElement.simplegallerie_description
+                tt_content_defValues {
+                    CType = altaahsimplegallerie_simplegallerie
+                }
+            }
+    }
+    show := addToList(simplegallerie)
+}

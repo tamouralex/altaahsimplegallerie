@@ -1,0 +1,52 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="Main">
+
+
+<f:if condition="{data_tx_altaahsimplegallerie_simplegalerieimg}">
+
+<div class="row gallery">
+<f:for each="{data_tx_altaahsimplegallerie_simplegalerieimg}" as="data_item">
+   <f:if condition="{data_item.data_tx_altaahsimplegallerie_simpleimg}">
+       <f:for each="{data_item.data_tx_altaahsimplegallerie_simpleimg}" as="file">      
+    	<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+    		<a href="../fileadmin{file.identifier}" class="altaahhelppopup-btn{data.uid} fancylight popup-btn" data-fancybox-group="light">
+               <div class="sgacont">
+                  <f:image image="{file}" additionalAttributes="{caption: '{file.description}'}" class="img-fluid" alt="{file.alternative}" title="{file.title}" />
+                  <div class="sgaoverlay">
+                    <div class="sgatext">{file.title}</div>
+                  </div>
+               </div>         
+    		</a>
+    	</div>
+        </f:for>	
+   </f:if>
+</f:for>	
+</div>	
+
+</f:if>
+
+<f:asset.script identifier="{data.uid}">
+    $(document).ready(function () {
+        var popup_btn = $('.altaahhelppopup-btn{data.uid}');
+        popup_btn.magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            },
+           image: {
+               verticalFit: true,
+               titleSrc: function(item) {
+                  return item.el.find('img').attr('caption');
+               }
+           }
+        });
+    });
+</f:asset.script>
+
+
+</f:section>
+
+</html>
+

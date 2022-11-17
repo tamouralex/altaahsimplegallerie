@@ -1,0 +1,100 @@
+
+
+/* .container{
+	width:90%
+	margin:10px auto;
+} */
+.mfp-image-holder .mfp-content {
+  max-width: 89vh;
+}
+
+
+.sgacont {
+  position: relative;
+}
+
+.sgaimage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sgaoverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.sgacont:hover .sgaoverlay {
+  opacity: 0.9;
+}
+
+.sgatext {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.sgabtn-outline-dark {
+  color: #212529;
+  border-color: #212529;
+  background-color: lightslategray;
+}
+
+.sgabtn-outline-dark.active, .sgabtn-outline-dark.dropdown-toggle.show {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

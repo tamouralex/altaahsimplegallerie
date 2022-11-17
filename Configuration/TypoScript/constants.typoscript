@@ -1,0 +1,19 @@
+
+# cat=altaahsimplegallerie/file; type=string; label=Path to template root (FE)
+plugin.tx_altaahsimplegallerie.view.templateRootPath =
+
+# cat=altaahsimplegallerie/file; type=string; label=Path to template partials (FE)
+plugin.tx_altaahsimplegallerie.view.partialRootPath = EXT:altaah1package/Resources/Private/Partials/ContentElements/
+
+# cat=altaahsimplegallerie/file; type=string; label=Path to template layouts (FE)
+plugin.tx_altaahsimplegallerie.view.layoutRootPath = EXT:altaah1package/Resources/Private/Layouts/ContentElements/
+
+
+# cat=altaahsimplegallerie/file; type=boolean; label=Include Jquery.js
+incjqsg = 
+
+# cat=altaahsimplegallerie/file; type=boolean; label=Include magnific-popup.js
+incmagnificjssg = 
+
+# cat=altaahsimplegallerie/file; type=boolean; label=Include magnific-popup.css
+incmagnificcsssg = 
